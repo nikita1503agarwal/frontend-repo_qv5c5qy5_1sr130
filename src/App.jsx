@@ -1,26 +1,27 @@
-import { useState } from 'react'
+import Hero from './components/Hero'
+import Showcase from './components/Showcase'
+import HowItWorks from './components/HowItWorks'
+import WhyLove from './components/WhyLove'
+import Comparison from './components/Comparison'
+import StoryStrip from './components/StoryStrip'
+import Testimonials from './components/Testimonials'
+import OrderForm from './components/OrderForm'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
-        </div>
-      </div>
+    <div className="font-[Inter] text-orange-900 selection:bg-yellow-200 selection:text-orange-900">
+      <Hero />
+      <StoryStrip />
+      <Showcase />
+      <HowItWorks />
+      <WhyLove />
+      <Comparison />
+      <Testimonials />
+      <OrderForm />
+
+      <footer className="py-10 text-center text-sm text-orange-900/70 bg-gradient-to-t from-orange-50 to-white">
+        © {new Date().getFullYear()} Papayow — kid-safe, non-toxic, handcrafted • Creation 2–4 days then shipping
+      </footer>
     </div>
   )
 }
